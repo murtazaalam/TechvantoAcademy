@@ -1,0 +1,31 @@
+[
+    {
+        "id":1,
+        "category_name":"Business"
+    },
+    {
+        "id":2,
+        "category_name":"App Development"
+    },
+    {
+        "id":3,
+        "category_name":"Digital Marketing"
+    },
+    {
+        "id":4,
+        "category_name":"Website Development"
+    },
+    {
+        "id":5,
+        "category_name":"Programmming Language"
+    },
+    {
+        "id":6,
+        "category_name":"Hardware Training"
+    },
+    {
+        "id":7,
+        "category_name":"Data Science"
+    }
+
+]
