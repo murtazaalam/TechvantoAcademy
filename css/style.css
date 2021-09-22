@@ -991,7 +991,7 @@ input[type="email"]{
     border-radius: 50%;
     overflow: hidden;
 }
-.my-container h2{
+.my-container .course-head h2{
     font-size: 24px;
     color: #252525;
     font-weight: 600;
@@ -1002,6 +1002,7 @@ input[type="email"]{
     margin-left: 14px;
     color: #252525;
     padding-right: 10px;
+    display: block;
 }
 .my-container .instructor-info .update-date span{
     font-size: 14px;
@@ -1009,6 +1010,7 @@ input[type="email"]{
     padding-left: 10px;
     border-left: 1px solid;
     border-color: #d9dee3;
+    display: block;
 }
 .my-container .total-enrolled{
     margin-top: 18px;
@@ -1018,6 +1020,214 @@ input[type="email"]{
 }
 .my-container .total-enrolled span{
     margin-left: 10px;
+}
+.course-detail{
+    background: #fff;
+}
+.my-container h4{
+    font-size: 20px;
+    color: #252525;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+.my-container .about-course{
+    margin-bottom: 40px;
+}
+.my-container .about-course p{
+    font-size: 14px;
+    color: #696969;
+    line-height: 1.86;
+}
+.my-container .learning-obj{
+    padding: 11px 30px 11px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+.my-container .learning-obj .lo-list p{
+    font-size: 14px;
+    color: #696969;
+    font-weight: 500;
+    line-height: 1.86;
+}
+.my-container .learning-obj .lo-list span{
+    color: #6cbd7e;
+    width: 21px;
+    height: 21px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    font-size: 11px;
+    padding: 0px 3px 0px 3px;
+    margin-right: 4px;
+}
+.my-container .requirements{
+    margin-bottom: 40px;
+}
+.my-container .requirements ul{
+    list-style-type: none;
+    padding: 0;
+}
+.my-container .requirements ul li{
+    line-height: 2;
+    font-size: 14px;
+    color: #4B5981;
+    display: flex;
+}
+.my-container .requirements ul li span{
+    display: block;
+}
+.my-container .requirements ul li span:first-child{
+    margin-right: 8px;
+    color: var(--red);
+}
+.my-container .target-audience{
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+.my-container .target-audience ul{
+    list-style-type: none;
+    padding: 0;
+}
+.my-container .target-audience ul li{
+    line-height: 1.86;
+    font-size: 14px;
+    color: #4B5981;
+    display: flex;
+}
+.my-container .target-audience ul li span{
+    display: block;
+}
+.my-container .target-audience ul li span:first-child{
+    margin-right: 8px;
+}
+.my-container .curriculum{
+    margin-bottom: 40px;
+}
+.my-container .curriculum .header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.my-container .curriculum .header div{
+    display: flex;
+}
+.my-container .curriculum .header div p{
+    margin-right: 45px;
+    color: #4B5981;
+    font-size: 14px;
+    font-weight: 600;
+}
+.my-container .curriculum .header div p:last-child{
+    font-weight: 500 !important;
+    margin-right: 0 !important;
+}
+.my-container .curriculum .cu-list button{
+    font-size: 15px;
+    color: var(--red);
+    line-height: 26px;
+}
+.my-container .curriculum .cu-list button .plus.active{
+    display: none;
+}
+.my-container .curriculum .cu-list button .minus.active{
+    display: block;
+}
+.my-container .curriculum .cu-list button .minus{
+    margin-right: 8px;
+    display: none;
+}
+.my-container .curriculum .cu-list button .plus{
+    margin-right: 8px;
+    display: block;
+}
+.my-container .curriculum .cu-list button{
+    background: #fff;
+    border-radius: 4px;
+}
+.my-container .curriculum .cu-list button:focus{
+    box-shadow: none;
+}
+.my-container .curriculum .accordion-header{
+    border-radius: 5px;
+}
+.my-container .curriculum .accordion-item{
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+.my-container .curriculum .accordion-item:nth-last-of-type(2),
+.my-container .curriculum .accordion-item:last-of-type{
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+.my-container .curriculum .cu-list button::after{
+    content: "";
+    width: 20px; 
+    height: 20px;
+    background: #fff;
+}
+.my-container .instructor .instr-image img{
+    border-radius: 4px;
+}
+.my-container .instructor .instr-name{
+    font-size: 18px;
+    font-weight: 700;
+    color: #252525;
+    margin-bottom: 6px;
+}
+.my-container .instructor .instr-rating{
+    font-size: 14px;
+}
+.my-container .instructor .instr-rating span:nth-last-child(2){
+    color: #252525;
+    font-weight: 700;
+}
+.my-container .instructor .instr-rating span:last-child{
+    color: #696969;
+    margin-left: -3px;
+}
+.my-container .instructor .instr-other-details{
+    display: flex;
+    font-size: 13px;
+    color: #7e7e7e;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.my-container .instructor .other-details{
+    margin-right: 15px;
+}
+.my-container .instructor .instr-about{
+    font-size: 14px;
+    color: #7e7e7e;
+    line-height: 1.86;
+}
+.my-container .instructor .instr-about a{
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--red);
+    cursor: pointer;
+    font-weight: 600;
+}
+.my-container .instructor .instr-review{
+    padding-top: 60px;
+}
+.my-container .instructor .instr-review button{
+    height: 52px;
+    padding: 0 24px;
+    border: none;
+    border-radius: 4px;
+    background: var(--red);
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+.my-container .instructor .instr-review button:hover{
+    background: #ffc221;
+    color: #031f42;
 }
 
 /*Mobile styles*/
@@ -1333,5 +1543,13 @@ input[type="email"]{
 @media screen and (max-width: 767px){
     .partners .col-xs-6{
         width: 50%;
+    }
+}
+@media screen and (max-width: 568px){
+    .my-container .instructor .small-col-4{
+        width: 33.33%;
+    }
+    .my-container .instructor .small-col-8{
+        width: 66.66%;
     }
 }
