@@ -969,6 +969,57 @@ input[type="email"]{
 .courses-area .page ul li span a:hover{
     color: var(--red);
 }
+
+.course-head h4 a{
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--red);
+    cursor: pointer;
+    font-weight: 600;
+}
+.my-container{
+    padding: 74px 0px 20px 0px;
+}
+.my-container .instructor-info{
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+.my-container .instructor-info .instr-pic{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.my-container h2{
+    font-size: 24px;
+    color: #252525;
+    font-weight: 600;
+}
+.my-container .instructor-info .instr-name span{
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 14px;
+    color: #252525;
+    padding-right: 10px;
+}
+.my-container .instructor-info .update-date span{
+    font-size: 14px;
+    color: #7e7e7e;
+    padding-left: 10px;
+    border-left: 1px solid;
+    border-color: #d9dee3;
+}
+.my-container .total-enrolled{
+    margin-top: 18px;
+    font-size: 13px;
+    color: #7e7e7e;
+    font-weight: 500;
+}
+.my-container .total-enrolled span{
+    margin-left: 10px;
+}
+
 /*Mobile styles*/
 .mobile-menu{
     display: flex;
@@ -1011,6 +1062,10 @@ input[type="email"]{
 .course-item h3 a{
     text-decoration: none;
     color: #000;
+    transition: 0.3s;
+}
+.course-item h3 a:hover{
+    color: var(--red);
 }
 .price{
     font-weight: 800;
@@ -1181,6 +1236,7 @@ input[type="email"]{
     position: absolute;
     height: 2px;
     width: 0px;
+    left: 0;
     background: #252525;
     transition: width 0.3s;
 }
@@ -1262,6 +1318,9 @@ input[type="email"]{
     .top-category .category-box{
         width: auto;
         max-width: 330px;
+    }
+    .my-container{
+        padding: 74px 128px 20px 128px;
     }
 
 }
