@@ -98,13 +98,18 @@ header{
     align-items: center;
 }
 .user .login a{
-    padding: 5px 12px;
+    position: relative;
+    padding: 6px 0px;
     color: #696969;
     text-decoration: none;
+    margin: 0px 12px;
     transition: 0.3s;
 }
 .user .login a:hover{
     color: var(--red);
+}
+.user .login a:hover .moving-line{
+    width: 100%;
 }
 .user .sign-up{
     min-height: 60px;
@@ -126,24 +131,24 @@ header{
     background: var(--red);
     color: #fff;
 }
-.user .sign-up h5{
+.signup-modal h5{
     font-size: 32px;
     font-weight: 600;
 }
-.user .already-account{
+.signup-modal .already-account{
     font-size: 14px;
     text-align: center;
     color: #696969;
     margin-bottom: 15px;
 }
-.user .already-account a{
+.signup-modal .already-account a{
     position: relative;
     text-decoration: none;
     color: #252525;
     font-weight: 600;
     border-bottom: 1px solid #ababab;
 }
-.user .already-account a .line{
+.signup-modal .already-account a .line{
     height: 1px;
     width: 0%;
     background: #252525;
@@ -151,17 +156,17 @@ header{
     left: 1%;
     transition: width 0.3s;
 }
-.user .already-account a:hover .line{
+.signup-modal .already-account a:hover .line{
     width: 100%;
 }
-.user form label{
+.signup-modal form label{
     font-size: 13px;
     font-weight: 600;
     color: #7a7a7a;
     margin-top: 14px;
     cursor: pointer;
 }
-.user form input[type="text"], input[type="password"],
+.signup-modal form input[type="text"], input[type="password"],
 input[type="email"]{
     background: #f8f8f8;
     border-color: #f8f8f8;
@@ -171,42 +176,42 @@ input[type="email"]{
     line-height: 2.5;
     transition: 0.3s;
 }
-.user form input::placeholder{
+.signup-modal form input::placeholder{
     color: #ababab;
 }
-.user .modal .modal-body{
+.signup-modal .modal .modal-body{
     padding: 0 50px 0 50px;
 }
-.user form .form-control:focus{
+.signup-modal form .form-control:focus{
     box-shadow: none;
     color: #212529;
     background-color: #fff;
     border-color: #88797a;
     outline: 0;
 }
-.user .tnc-check{
+.signup-modal .tnc-check{
     margin: 44px 0 25px 0;
     width: fit-content;
     transition: 0.3s;
 }
-.user .tnc-check span a{
+.signup-modal .tnc-check span a{
     font-size: 14px;
     text-decoration: none;
     color: #7a7a7a;
     margin-left: 8px;
     cursor: pointer;
 }
-.user input[type="checkbox"]{
+.signup-modal input[type="checkbox"]{
     transition: 0.3s;
     cursor: pointer;
 }
-.user input[type="checkbox"]:focus{
+.signup-modal input[type="checkbox"]:focus{
     box-shadow: none;
 }
-.user .tnc-check:hover input[type="checkbox"]{
+.signup-modal .tnc-check:hover input[type="checkbox"]{
     border-color: #0071dc;
 }
-.user .sign-up .close{
+.signup-modal .close{
     background: none;
     border: none;
     position: absolute;
@@ -214,7 +219,7 @@ input[type="email"]{
     top: -27px;
     color: #fff;
 }
-.user form button[type="submit"]{
+.signup-modal form button[type="submit"]{
     width: 100%;
     border: none;
     background: var(--red);
@@ -225,15 +230,15 @@ input[type="email"]{
     border-radius: 5px;
     transition: 0.3s;
 }
-.user form button[type="submit"]:hover{
+.signup-modal form button[type="submit"]:hover{
     background: #ffc221;
     border-color: #ffc221;
     color: #031f42;
 }
-.user form .password{
+.signup-modal form .password{
     position: relative;
 }
-.user form .password .icon{
+.signup-modal form .password .icon{
     position: absolute;
     right: 30px;
     top: 60%;
@@ -242,7 +247,7 @@ input[type="email"]{
     cursor: pointer;
     transition: 0.3s;
 }
-.user form .password .icon:hover{
+.signup-modal form .password .icon:hover{
     color: #0071dc;
 }
 .center-content .left-content{
@@ -342,12 +347,13 @@ input[type="email"]{
     position: absolute;
     display: block;
 }
-.page-navigation .moving-line{
+.page-navigation .moving-line, .user .moving-line{
     position: absolute;
     height: 1px;
     background: var(--red);
     width: 0%;
-    bottom: -6px;
+    bottom: 0px;
+    left: 0;
     transition: width 0.3s;
 }
 .become-instructor{
@@ -357,7 +363,7 @@ input[type="email"]{
     color: var(--red);
 }
 .become-instructor a:hover .moving-line{
-    width: 90%;
+    width: 100%;
 }
 .page-navigation nav{
     height: 100%;
@@ -377,6 +383,8 @@ input[type="email"]{
 }
 .page-navigation ul li a{
     text-decoration: none;
+    position: relative;
+    padding: 6px 0;
     color: #333;
     transition: 0.3s;
 }
@@ -1229,7 +1237,153 @@ input[type="email"]{
     background: #ffc221;
     color: #031f42;
 }
-
+.my-container .video-box{
+    margin-top: 20px;
+    box-shadow: 0 0 30px rgb(0 0 0 / 5%);
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+.my-container .video-box .video{
+    height: 100%;
+    padding-bottom: 56%;
+    position: relative;
+}
+.my-container .video-box .video iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.my-container .video-box .course-detail{
+    padding: 30px 0;
+    border-radius: 5px;
+}
+.my-container .video-box .course-detail .course-price 
+span:first-child{
+    color: #031f42;
+    font-size: 34px;
+    font-weight: 700;
+}
+.my-container .video-box .course-detail .course-price 
+span:last-child{
+    font-size: 24px;
+    font-weight: 700;
+    color: #031f42;
+}
+.my-container .video-box .course-detail .other{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.my-container .video-box .course-detail .other .icon,
+.my-container .video-box .course-detail .other .sub-heading{
+    color: #696969;
+}
+.my-container .video-box .course-detail .other .heading{
+    color: #252525;
+    font-weight: 600;
+    margin-left: 8px;
+}
+.my-container .video-box .course-detail button{
+    width: 100%;
+    background: var(--red);
+    border: none;
+    height: 52px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.my-container .video-box .course-detail button:hover{
+    background: #FFC221;
+    color: #031f42;
+}
+.my-container .video-box .course-detail button span{
+    margin-right: 10px;
+}
+.my-container .video-box .course-detail button:last-child{
+    background: #fadddd !important;
+    margin-top: 10px;
+    color: var(--red) !important;
+}
+.my-container .video-box .course-detail button:last-child:hover{
+    background: var(--red) !important;
+    color: #fff !important;
+}
+.my-container .video-box .course-detail .social-media ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.my-container .category-box{
+    margin-top: 20px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgb(0 0 0 / 5%);
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+.my-container .category-box ul{
+    list-style-type: none;
+    padding: 0;
+}
+.my-container .category-box ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #696969;
+    font-weight: 600;
+    line-height: 2.5;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.my-container .category-box ul li a:hover{
+    color: var(--red);
+}
+.my-container .related-course{
+    margin-top: 20px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgb(0 0 0 / 5%);
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+.my-container .related-course .course-box{ 
+    display: flex;
+    margin-bottom: 20px;
+}
+.my-container .related-course .course-box img{
+    border-radius: 5px;
+} 
+.my-container .related-course .course-box .title{
+    text-decoration: none;
+    margin-left: 10px;
+    color: #252525;
+    font-size: 13px;
+    font-weight: 600;
+    display: block;
+    line-height: 22px;
+    transition: 0.3s;
+    padding-bottom: 9px;
+}
+.my-container .related-course .course-box .title:hover{
+    color: var(--red);
+}
+.my-container .related-course .course-box span:first-child{
+    color: #031f42;
+    font-weight: 700;
+    margin-left: 10px;
+}
+.my-container .related-course .course-box span:last-child{
+    font-size: 11px;
+    color: #031f42;
+    font-weight: 700;
+    margin-left: -2px;
+}
 /*Mobile styles*/
 .mobile-menu{
     display: flex;
@@ -1325,6 +1479,9 @@ input[type="email"]{
     }
     .courses-area .filter span:nth-last-child(2){
         margin-right: 26px;
+    }
+    .my-container .video-box .course-detail{
+        padding: 30px;
     }
 }
 
@@ -1551,5 +1708,13 @@ input[type="email"]{
     }
     .my-container .instructor .small-col-8{
         width: 66.66%;
+    }
+}
+@media screen and (max-width: 334px){
+    .my-container .instructor .other-details{
+        font-size: 10px;
+    }
+    .my-container .curriculum .header{
+        display: block;
     }
 }

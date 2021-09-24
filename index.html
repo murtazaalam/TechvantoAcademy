@@ -98,88 +98,13 @@
                                 <div class="right-content">
                                     <div class="user">
                                         <div class="login">
-                                            <a href="">Log In</a>
+                                            <a href="#">
+                                                Log In
+                                                <div class="moving-line"></div>
+                                            </a>
                                         </div>
                                         <div class="sign-up">
                                             <a href="" data-bs-toggle="modal" class="sign-up-btn" data-bs-target="#signUpForm">Sign Up</a>
-                                            <!--Sign up form-->
-                                            <div class="modal fade" id="signUpForm" aira-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered modal-lg">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header border-0">
-                                                            <div class="w-100">
-                                                                <h5 class="modal-title text-center">Sign Up</h5>
-                                                            </div>
-                                                            
-                                                            <button type="button" class="close" data-bs-dismiss="modal">
-                                                                X
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <div class="already-account">
-                                                                <span class="">Already have an account? 
-                                                                    <a href="#">
-                                                                        Log in
-                                                                        <div class="line"></div>
-                                                                    </a>
-                                                                </span>
-                                                            </div>
-                                                            
-                                                            <form class="row">
-                                                                <div class="col-md-6">
-                                                                    <label for="firstName" class="form-label">FIRST NAME</label>
-                                                                    <input type="text" class="form-control" id="firstName"
-                                                                     placeholder="First Name"/>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <label for="lastName" class="form-label">LAST NAME</label>
-                                                                    <input type="text" class="form-control" id="lastName"
-                                                                     placeholder="Last Name"/>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <label for="userName" class="form-label">USERNAME</label>
-                                                                    <input type="text" class="form-control" id="userName"
-                                                                     placeholder="Username"/>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <label for="email" class="form-label">EMAIL</label>
-                                                                    <input type="email" class="form-control" id="email"
-                                                                     placeholder="Email"/>
-                                                                </div>
-                                                                <div class="col-md-6 password">
-                                                                    <label for="password" class="form-label">PASSWORD</label>
-                                                                    <input type="password" class="form-control" id="password"
-                                                                     placeholder="Password"/>
-                                                                     <div class="icon">
-                                                                        <i class="fas fa-eye"></i>
-                                                                     </div>
-                                                                </div>
-                                                                <div class="col-md-6 password">
-                                                                    <label for="reEnterPassword" class="form-label">RE-ENTER PASSWORD</label>
-                                                                    <input type="password" class="form-control" id="reEnterPassword"
-                                                                     placeholder="Re-Enter Password"/>
-                                                                     <div class="icon">
-                                                                        <i class="fas fa-eye"></i>
-                                                                     </div>
-                                                                </div>
-                                                                <div class="col-md-12 tnc-check">
-                                                                    <input type="checkbox" class="form-check-input" id="tnc"/>
-                                                                    <span for="tnc" class="form-label">
-                                                                        <a href="#">Accept the Terms and Privacy Policy</a>
-                                                                    </span>
-                                                                    
-                                                                </div>
-                                                                <div class="col-md-12">
-                                                                    <button type="submit" class="btn-register">Register</button>
-                                                                </div>
-
-                                                            </form>
-                                                        </div>
-                                                        <div class="modal-footer border-0"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--End of sign up form-->
                                         </div>
                                     </div>
                                 </div>
@@ -1251,6 +1176,85 @@
                 </div>
             </div>
         </footer>
-        <div w3-include-html="test.html"></div>
+
+        <!--Sign up form modal-->
+        <div class="modal fade signup-modal" id="signUpForm" aira-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <div class="w-100">
+                            <h5 class="modal-title text-center">Sign Up</h5>
+                        </div>
+                        
+                        <button type="button" class="close" data-bs-dismiss="modal">
+                            X
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="already-account">
+                            <span class="">Already have an account? 
+                                <a href="#">
+                                    Log in
+                                    <div class="line"></div>
+                                </a>
+                            </span>
+                        </div>
+                        
+                        <form class="row">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">FIRST NAME</label>
+                                <input type="text" class="form-control" id="firstName"
+                                 placeholder="First Name"/>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">LAST NAME</label>
+                                <input type="text" class="form-control" id="lastName"
+                                 placeholder="Last Name"/>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="userName" class="form-label">USERNAME</label>
+                                <input type="text" class="form-control" id="userName"
+                                 placeholder="Username"/>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">EMAIL</label>
+                                <input type="email" class="form-control" id="email"
+                                 placeholder="Email"/>
+                            </div>
+                            <div class="col-md-6 password">
+                                <label for="password" class="form-label">PASSWORD</label>
+                                <input type="password" class="form-control" id="password"
+                                 placeholder="Password"/>
+                                 <div class="icon">
+                                    <i class="fas fa-eye"></i>
+                                 </div>
+                            </div>
+                            <div class="col-md-6 password">
+                                <label for="reEnterPassword" class="form-label">RE-ENTER PASSWORD</label>
+                                <input type="password" class="form-control" id="reEnterPassword"
+                                 placeholder="Re-Enter Password"/>
+                                 <div class="icon">
+                                    <i class="fas fa-eye"></i>
+                                 </div>
+                            </div>
+                            <div class="col-md-12 tnc-check">
+                                <input type="checkbox" class="form-check-input" id="tnc"/>
+                                <span for="tnc" class="form-label">
+                                    <a href="#">Accept the Terms and Privacy Policy</a>
+                                </span>
+                                
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="btn-register">Register</button>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer border-0"></div>
+                </div>
+            </div>
+        </div>
+        <!--End of sign up form modal-->
+
     </body>
 </html>
