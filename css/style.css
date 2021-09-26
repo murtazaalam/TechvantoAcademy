@@ -452,7 +452,7 @@ input[type="email"]{
     padding-top: 50px;
 }
 .start-to-success .inner-content{
-    padding: 0 15px;
+    padding: 0 0 60px 15px;
 }
 .success-text h3{
     color: var(--red);
@@ -554,7 +554,6 @@ input[type="email"]{
 }
 .highlights .container{
     background: var(--red);
-    margin: 60px 0 0 0;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -893,15 +892,15 @@ input[type="email"]{
 .tnc .links a:hover{
     color: var(--red);
 }
-.courses-heading{   
+.courses-heading, .blog-heading{   
     padding-top: 15px;
     font-weight: 00;
     padding-bottom: 60px;
 }
-.courses-heading h1{
+.courses-heading h1, .blogs-heading h1{
     text-align: center;
     font-weight: 600;
-    margin: 10px 0;
+    margin: 40px 0;
 }
 
 .courses-area .top-filter p{
@@ -951,30 +950,30 @@ input[type="email"]{
     color: #252525;
     font-weight: 700;
 }
-.courses-area .page ul{
+.page ul{
     justify-content: center;
 }
-.courses-area .page ul li span{
+.page ul li span{
     border-radius: 50% !important;
     padding: 6px 14px;
     border: none;
 }
-.courses-area .page .active span{
+.page .active span{
     background: var(--red) !important;
 }
-.courses-area .page .active span:hover{
+.page .active span:hover{
     color: #fff !important;
 }
-.courses-area .page ul li span a{
+.page ul li span a{
     color: #000;
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s;
 }
-.courses-area .page ul li span:hover{
+.page ul li span:hover{
     background: #fff;
 }
-.courses-area .page ul li span a:hover{
+.page ul li span a:hover{
     color: var(--red);
 }
 
@@ -1256,7 +1255,7 @@ input[type="email"]{
     border-top-right-radius: 5px;
 }
 .my-container .video-box .course-detail{
-    padding: 30px 0;
+    padding: 30px 10px;
     border-radius: 5px;
 }
 .my-container .video-box .course-detail .course-price 
@@ -1384,6 +1383,33 @@ span:last-child{
     font-weight: 700;
     margin-left: -2px;
 }
+
+.blogs .date-n-views{
+    font-size: 12px;
+    color: #7e7e7e;
+    padding-top: 16px;
+}
+.blogs .date-n-views .blog-date{
+    margin-right: 30px;
+}
+.blogs .date-n-views span .icon{
+    margin-right: 10px;
+}
+.blogs .read-more{
+    border: none;
+    min-height: 40px;
+    padding: 0 23px;
+    border-radius: 4px;
+    background: #f5f5f5;
+    color: var(--red);
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+.blogs .read-more:hover{
+    box-shadow: 0 6px 25px rgb(0 0 0 / 10%);
+    background: #fff;
+}
 /*Mobile styles*/
 .mobile-menu{
     display: flex;
@@ -1461,11 +1487,12 @@ span:last-child{
 .course-item img:hover{
     transform: scale(1.5);
 }
-.student-view .course-item .title{
+.course-item .title{
     font-size: 15px !important;
 }
-.student-view .course-item p{
+.course-item p{
     font-size: 13px;
+    color: #7e7e7e;
 }
 .student-view-tabs .heading-for-lap{
     display: none;
@@ -1585,21 +1612,24 @@ span:last-child{
     .courses-area .filter span:first-child{
         display: inline-block;
     }
+    .blogs .date-n-views{
+        font-size: 14px;
+    }
 }
-.courses-heading{
+.courses-heading, .blogs-heading{
     background: #f8f8f8;
     padding: 15px 0 60px 0;
 }
-.courses-heading .home{
+.courses-heading .home, .blogs-heading .home{
     position: relative;
     text-decoration: none;
     color: #ababab;
     transition: 0.3s;
 }
-.courses-heading .home:hover{
+.courses-heading .home:hover, .blogs-heading .home:hover{
     color: #252525;
 }
-.courses-heading .home .line{
+.courses-heading .home .line, .blogs-heading .home .line{
     position: absolute;
     height: 2px;
     width: 0px;
@@ -1607,13 +1637,14 @@ span:last-child{
     background: #252525;
     transition: width 0.3s;
 }
-.courses-heading .home:hover .line{
+.courses-heading .home:hover .line,
+.blogs-heading .home:hover .line{
     width: 100%;
 } 
-.courses-heading ol li{
+.courses-heading ol li, .blogs-heading ol li{
     font-size: 14px;
 }
-.courses-area{
+.courses-area, .blogs{
     background: #fff;
     padding-top: 60px;
 }
