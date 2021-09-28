@@ -323,13 +323,6 @@ input[type="email"]{
     line-height: 19px;
     font-weight: 700;
 }
-.header-wrap .cart:hover .cart-dropdown{
-    display: block;
-}
-.cart-dropdown{
-    display: none;
-    position: absolute;
-}
 .header-wrap .page-navigation{
     display: none;
     height: 60px;
@@ -892,12 +885,12 @@ input[type="email"]{
 .tnc .links a:hover{
     color: var(--red);
 }
-.courses-heading, .blog-heading{   
+.page-heading{   
     padding-top: 15px;
     font-weight: 00;
     padding-bottom: 60px;
 }
-.courses-heading h1, .blogs-heading h1{
+.page-heading h1{
     text-align: center;
     font-weight: 600;
     margin: 40px 0;
@@ -1410,6 +1403,33 @@ span:last-child{
     box-shadow: 0 6px 25px rgb(0 0 0 / 10%);
     background: #fff;
 }
+.cart-area h1{
+    margin: 20px 0;
+    font-size: 36px;
+    color: #252525;
+}
+.cart-area p{
+    font-size: 14px;
+    color: #696969;
+    margin-bottom: 20px;
+}
+.cart-area button{
+    border: none;
+    color: #fff;
+    background: var(--red);
+    font-size: 15px;
+    font-weight: 700;
+    min-height: 52px;
+    padding: 0 42px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+.cart-area button:hover{
+    background: #ffc221;
+    color: #031f42;
+}
 /*Mobile styles*/
 .mobile-menu{
     display: flex;
@@ -1616,20 +1636,20 @@ span:last-child{
         font-size: 14px;
     }
 }
-.courses-heading, .blogs-heading{
+.page-heading{
     background: #f8f8f8;
     padding: 15px 0 60px 0;
 }
-.courses-heading .home, .blogs-heading .home{
+.page-heading ol a{
     position: relative;
     text-decoration: none;
     color: #ababab;
     transition: 0.3s;
 }
-.courses-heading .home:hover, .blogs-heading .home:hover{
+.page-heading ol a:hover{
     color: #252525;
 }
-.courses-heading .home .line, .blogs-heading .home .line{
+.page-heading ol a .line{
     position: absolute;
     height: 2px;
     width: 0px;
@@ -1637,14 +1657,13 @@ span:last-child{
     background: #252525;
     transition: width 0.3s;
 }
-.courses-heading .home:hover .line,
-.blogs-heading .home:hover .line{
+.page-heading ol a:hover .line{
     width: 100%;
 } 
-.courses-heading ol li, .blogs-heading ol li{
+.page-heading ol li{
     font-size: 14px;
 }
-.courses-area, .blogs{
+.courses-area, .blogs, .cart-area{
     background: #fff;
     padding-top: 60px;
 }
