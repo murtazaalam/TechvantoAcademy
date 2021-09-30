@@ -29,7 +29,118 @@
                 <h1>Cart</h1>
             </div>
         </section>
-        <section class="cart-area text-center">
+
+        <section class="cart-area">
+            <div class="container">
+                <table class="table product-table">
+                    <thead>
+                        <tr class="table-heading">
+                            <th>
+                                Product
+                            </th>
+                            <th>
+
+                            </th>
+                            <th>
+                                Price
+                            </th>
+                            <th>
+                                Quantity
+                            </th>
+                            <th>
+                                Subtotal
+                            </th>
+                            <th>
+
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="images/course_img_1.jpg" class="img-fluid"/>
+                            </td>
+                            <td>
+                                Angular - The Complete Guide (2020 Edition)
+                            </td>
+                            <td>
+                                $49.99
+                            </td>
+                            <td>
+                                <input type="number" value="1"/>
+                            </td>
+                            <td style="font-weight: 700;">
+                                $49.99
+                            </td>
+                            <td>
+                                <div class="remove-item">
+                                    <span>
+                                        Remove
+                                        <div class="line-1"></div>
+                                        <div class="line-2"></div>
+                                    </span>
+                                </div>
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="lower-button">
+                    <div class="continue-clear-btn">
+                        <button type="button" class="">Continue shoping</button>
+                        <span class="clear">
+                            <span>
+                                <i class="fa fa-times"></i>
+                            </span>
+                            <span>Clear cart</span>
+                        </span>
+                    </div>
+                    <div class="update-cart">
+                        <button type="button" disabled>Update cart</button>
+                    </div>
+                </div>
+                <div class="total-n-coupon">
+                    <div class="coupon">
+                        <h6>Coupon Discount</h6>
+                        <p>Enter coupon code if you have.</p>
+                        <input type="text" class="" placeholder="Coupon code" />
+                        <button type="button">Apply coupon</button>
+                    </div>
+                    <div class="total">
+                        <table class="table">
+                            <thead>
+                                
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="subtotal">
+                                        Subtotal
+                                    </td>
+                                    <td class="sub-amt">
+                                        $49.99
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="total-txt">
+                                        Total
+                                    </td>
+                                    <td class="total-amt">
+                                        $49.99
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="button" class="checkout-btn">Checkout</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!--When cartis blank, this section will be visible-->
+
+        <!-- <section class="empty-cart-area text-center">
             <div class="container">
                 <div class="cart-icon">
                     <img src="images/shopping-cart_big_icon.png" width="300" class="img-fluid"/>
@@ -38,6 +149,9 @@
                 <p>You may check out all the available courses in courses section.</p>
                 <button type="button" class="return-btn">Return to courses</button>
             </div>
-        </section>
+        </section> -->
+
+
+        <!--Blank cart section end here-->
     </body>
 </html>

@@ -1403,17 +1403,17 @@ span:last-child{
     box-shadow: 0 6px 25px rgb(0 0 0 / 10%);
     background: #fff;
 }
-.cart-area h1{
+.empty-cart-area h1{
     margin: 20px 0;
     font-size: 36px;
     color: #252525;
 }
-.cart-area p{
+.empty-cart-area p{
     font-size: 14px;
     color: #696969;
     margin-bottom: 20px;
 }
-.cart-area button{
+.empty-cart-area button{
     border: none;
     color: #fff;
     background: var(--red);
@@ -1426,9 +1426,230 @@ span:last-child{
     margin-bottom: 20px;
     transition: 0.3s;
 }
-.cart-area button:hover{
+.empty-cart-area button:hover{
     background: #ffc221;
     color: #031f42;
+}
+.cart-area .product-table thead tr{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.cart-area .product-table tr{
+    border: 1px solid #eee;
+}
+.cart-area .product-table tr th:first-child,
+.cart-area .product-table tr td:first-child{
+    padding-left: 30px;
+}
+.cart-area .product-table tr th{
+    padding: 12px 10px 12px 0;
+    font-size: 14px;
+    background: #f8f8f8;
+    border: none;
+    color: #252525;
+}
+.cart-area .product-table tr td{
+    padding: 12px 10px 12px 0;
+    font-size: 14px;
+    color: #252525;
+    vertical-align: middle;
+    text-align: left;
+}
+.cart-area .product-table tr td input{
+    padding: 2px 2px 2px 50px;
+    width: 110px;
+    outline: none;
+    border: none;
+    background: #f5f5f5;
+    min-height: 40px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.cart-area .product-table tr td .remove-item span{
+    padding: 5px 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #696969;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+.cart-area .product-table tr td .remove-item .line-1{
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #ddd;
+    display: block;
+}
+.cart-area .product-table tr td .remove-item .line-2{
+    width: 0px;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--red);
+    transition: width 0.3s;
+}
+.cart-area .product-table tr td .remove-item span:hover .line-1{
+    display: none;
+}
+.cart-area .product-table tr td .remove-item span:hover .line-2{
+    width: 100%;
+}
+.cart-area .product-table tr td .remove-item span:hover{
+    color: var(--red);
+}
+.cart-area .lower-button{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 40px 0px;
+    border-bottom: 1px solid #eee;
+}
+.cart-area .lower-button button{
+    background: #f5f5f5;
+    border: none;
+    padding: 0 26px;
+    min-height: 52px;
+    border-radius: 4px;
+    color: var(--red);
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    margin-right: 12px;
+    transition: 0.3s;
+}
+.cart-area .lower-button .continue-clear-btn button:hover{
+    background: var(--red);
+    color:#fff;
+}
+.cart-area .lower-button .continue-clear-btn .clear{
+    color: #696969;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cart-area .lower-button .continue-clear-btn .clear span:last-child{
+    transition: 0.3s;
+}
+.cart-area .lower-button .continue-clear-btn .clear span:first-child{
+    margin-right: 4px;
+    transition: 0.3s;
+}
+.cart-area .lower-button .continue-clear-btn .clear:hover span:first-child{
+    color: var(--red);
+}
+.cart-area .lower-button .continue-clear-btn .clear:hover span:last-child{
+    color: #252525;
+
+}
+.cart-area .lower-button .update-cart button{
+    background: #ffc221;
+    color: #252525;
+    padding: 0 41px;
+    margin: 0;
+}
+.cart-area .lower-button .update-cart button:disabled{
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+.cart-area .lower-button .update-cart button:hover{
+    background: var(--red);
+    color: #fff;
+}
+.cart-area .total-n-coupon{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+.cart-area .total-n-coupon .coupon{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.cart-area .total-n-coupon .coupon h6{
+    font-size: 18px;
+    margin-bottom: 18px;
+    margin-top: 15px;
+    color: #252525;
+    font-weight: 600;
+}
+.cart-area .total-n-coupon .coupon p{
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #696969;
+}
+.cart-area .total-n-coupon .coupon input{
+    margin-bottom: 20px;
+    outline: none;
+    border: 1px solid #f5f5f5;
+    background: #f8f8f8;
+    min-height: 52px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 3px 20px;
+    transition: 0.3s;
+}
+.cart-area .total-n-coupon .coupon input:focus{
+    background: #fff;
+    border-color: var(--red);
+}
+.cart-area .total-n-coupon .coupon button,
+.checkout-btn{
+    border: none;
+    min-height: 52px;
+    background: var(--red);
+    border-radius: 5px;
+    width: fit-content;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+    padding: 0 41px;
+    transition: 0.3s;
+}
+.cart-area .total-n-coupon .coupon button:hover,
+.checkout-btn:hover{
+    color: #031f42;
+    background: #ffc221;
+}
+.cart-area .total-n-coupon .total{
+    width: 30%;
+    padding: 25px 30px 34px;
+    background: #fff;
+    border: 1px solid #ededed;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgb(0 0 0 / 5%);
+}
+.cart-area .total-n-coupon .total table .subtotal{
+    font-size: 14px;
+    color: #696969;
+    padding-left: 0;
+}
+.cart-area .total-n-coupon .total table .sub-amt{
+    color: #031f42;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: right;
+    padding-right: 0;
+}
+.cart-area .total-n-coupon .total table .total-txt{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 27px 0 32px 0;
+    color: #252525;
+}
+.cart-area .total-n-coupon .total table .total-amt{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--red);
+    text-align: right;
+    padding: 20px 0 32px 0;
+}
+.cart-area .total-n-coupon .total .checkout-btn{
+    width: 100%;
 }
 /*Mobile styles*/
 .mobile-menu{
@@ -1663,9 +1884,9 @@ span:last-child{
 .page-heading ol li{
     font-size: 14px;
 }
-.courses-area, .blogs, .cart-area{
+.courses-area, .blogs, .cart-area, .empty-cart-area{
     background: #fff;
-    padding-top: 60px;
+    padding: 60px;
 }
 .row-area{
     flex-direction: column-reverse;
