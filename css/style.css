@@ -1430,9 +1430,14 @@ span:last-child{
     background: #ffc221;
     color: #031f42;
 }
+.cart-area{
+    background: #fff;
+    padding-top: 60px;
+}
 .cart-area .product-table thead tr{
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+    display: none;
 }
 .cart-area .product-table tr{
     border: 1px solid #eee;
@@ -1504,18 +1509,19 @@ span:last-child{
 .cart-area .lower-button{
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     padding: 10px 0 40px 0px;
     border-bottom: 1px solid #eee;
 }
 .cart-area .lower-button button{
     background: #f5f5f5;
     border: none;
-    padding: 0 26px;
+    padding: 0 11px;
     min-height: 52px;
     border-radius: 4px;
     color: var(--red);
     font-weight: 700;
-    font-size: 15px;
+    font-size: 14px;
     cursor: pointer;
     margin-right: 12px;
     transition: 0.3s;
@@ -1549,8 +1555,8 @@ span:last-child{
 .cart-area .lower-button .update-cart button{
     background: #ffc221;
     color: #252525;
-    padding: 0 41px;
-    margin: 0;
+    padding: 0 31px;
+    margin-top: 20px;
 }
 .cart-area .lower-button .update-cart button:disabled{
     cursor: not-allowed;
@@ -1563,12 +1569,13 @@ span:last-child{
 .cart-area .total-n-coupon{
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     padding: 40px 0;
 }
 .cart-area .total-n-coupon .coupon{
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 100%;
 }
 .cart-area .total-n-coupon .coupon h6{
     font-size: 18px;
@@ -1603,7 +1610,7 @@ span:last-child{
     min-height: 52px;
     background: var(--red);
     border-radius: 5px;
-    width: fit-content;
+    width: 100%;
     font-size: 15px;
     color: #fff;
     font-weight: 600;
@@ -1616,12 +1623,13 @@ span:last-child{
     background: #ffc221;
 }
 .cart-area .total-n-coupon .total{
-    width: 30%;
-    padding: 25px 30px 34px;
+    width: 100%;
+    padding: 10px;
     background: #fff;
     border: 1px solid #ededed;
     border-radius: 5px;
     box-shadow: 0 0 30px rgb(0 0 0 / 5%);
+    margin-top: 30px;
 }
 .cart-area .total-n-coupon .total table .subtotal{
     font-size: 14px;
@@ -1640,6 +1648,7 @@ span:last-child{
     font-weight: 700;
     padding: 27px 0 32px 0;
     color: #252525;
+    border: none;
 }
 .cart-area .total-n-coupon .total table .total-amt{
     font-size: 24px;
@@ -1647,10 +1656,198 @@ span:last-child{
     color: var(--red);
     text-align: right;
     padding: 20px 0 32px 0;
+    border: none;
 }
-.cart-area .total-n-coupon .total .checkout-btn{
+.blog-area{
+    padding: 60px 0 60px 0;
+    background: #fff;
+}
+.blog-area .blog-thumbnail img{
+    width: 770px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 7px;
+}
+.blog-area .blog-details{
+    display: inline-block;
+    font-size: 14px;
+    color: #7e7e7e;
+    margin: 20px 0 12px 0;
+}
+.blog-area .blog-details .author-img img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.blog-area .blog-details .author-name a,
+.blog-area .blog-details .comment a{
+    text-decoration: none;
+    color: #7e7e7e;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+.blog-area .blog-details a:hover{
+    color: var(--red);
+}
+.blog-area .blog-details .date,
+.blog-area .blog-details .views{
+    margin-right: 20px;
+}
+.blog-area .blog-details .icon{
+    margin-right: 10px;
+}
+.blog-area h1{
+    font-size: 28px;
+    color: #252525;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+    line-height: 1.42;
+}
+.blog-area .sub-title{
+    display: block;
+    color: #696969;
+    font-size: 15px;
+    line-height: 1.86;
+    margin-bottom: 36px;
+}
+.blog-area .pane{
+    margin-left: 50px;
+    border-left: 4px solid var(--red);
+    padding-left: 20px;
+    font-size: 18px;
+    color: #252525;
+    line-height: 1.8;
+    font-weight: 600;
+    max-width: 660px;
+}
+.blog-area .sub-heading,
+.blog-area .blog-points ol li{
+    font-size: 15px;
+    color: #696969;
+    font-weight: 700;
+    margin-top: 34px;
+    margin-bottom: 28px;
+}
+.blog-area .blog-points ol{
+    padding-left: 18px;
+}
+.blog-area .blog-points ol li p{
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 400;
+    margin-left: -19px;
+    color: #7e7e7e;
+}
+.blog-area .more-links{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 40px 0;
+    align-items: center;
+    border-bottom: 1px solid #ededed;
+}
+.blog-area .more-links .tips{
+    color: #696969;
+    display: inline-block;
+}
+.blog-area .more-links .share{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.blog-area .more-links .tips a{
+    color: #696969;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 4px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.blog-area .more-links .tips a:hover{
+    color: #252525;
+}
+.blog-area .more-links .share span:first-child{
+    font-size: 14px;
+    color: #252525;
+}
+.blog-area .more-links .share .icon{
+    padding: 12px 16px 12px 16px;
+    border: 2px solid;
+    border-radius: 50%;
+    border-color: #ededed;
+    font-size: 18px;
+    color: var(--red);
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 8px;
+}
+.blog-area .more-links .share .icon:hover{
+    background: var(--red);
+    color: #fff;
+    border-color: var(--red);
+}
+.blog-area .intrinsic-box{
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 0 40px 0;
+}
+.blog-area .intrinsic-box a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    min-height: 120px;
     width: 100%;
+    align-items: center;
+    background: #fadddd;
+    position: relative;
+    border-radius: 5px;
+    z-index: 1;
 }
+.blog-area .intrinsic-box a span{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: var(--red);
+    transition: 0.3s;
+}
+.blog-area .intrinsic-box a h6{
+    font-size: 18px;
+    font-weight: 600;
+    color: #252525;
+    width: 81%;
+    line-height: 1.8;
+    transition: 0.3s;
+}
+.blog-area .intrinsic-box .box-background{
+    height: 120px;
+    width: 100%;
+    background-image: url(../images/blog_1.jpg);
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 0;
+    background-size: cover;
+    transition: 0.3s;
+    
+}
+.blog-area .intrinsic-box a:hover h6{
+    color: #fff;
+}
+.blog-area .intrinsic-box a:hover span{
+    color: #fff;
+}
+.blog-area .intrinsic-box a:hover .box-background{
+    opacity: 1;
+}
+
 /*Mobile styles*/
 .mobile-menu{
     display: flex;
@@ -1751,6 +1948,35 @@ span:last-child{
     .my-container .video-box .course-detail{
         padding: 30px;
     }
+    .cart-area{
+        padding: 60px;
+    }
+    .cart-area .lower-button button{
+        padding: 0 26px;
+        font-size: 14px;
+    }
+    .cart-area .lower-button{
+        flex-direction: row;
+    }
+    .cart-area .lower-button .update-cart button{
+        margin: 0;
+        padding: 0 41px;
+    }
+    .blog-area{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .blog-area .more-links{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .blog-area .more-links .share{
+        display: block;
+        margin: 0;
+    }
+    .blog-area .intrinsic-box{
+        max-width: 350px;
+    }
 }
 
 /*Medium tablet styles*/
@@ -1818,6 +2044,22 @@ span:last-child{
     .row-area{
         flex-direction: row !important;
     }
+    .cart-area .total-n-coupon{
+        flex-direction: row;
+    }
+    .cart-area .total-n-coupon .coupon{
+        width: 30%;
+    }
+    .cart-area .total-n-coupon .total{
+        width: 30%;
+        margin-top: 0px;
+    }
+    .cart-area .total-n-coupon .coupon button{
+        width: fit-content;
+    }
+    .cart-area .product-table thead tr{
+        display: table-row;
+    }
 
 }
 
@@ -1856,6 +2098,9 @@ span:last-child{
     .blogs .date-n-views{
         font-size: 14px;
     }
+    .cart-area .total-n-coupon .total{
+        padding: 25px 30px 34px;
+    }
 }
 .page-heading{
     background: #f8f8f8;
@@ -1884,10 +2129,11 @@ span:last-child{
 .page-heading ol li{
     font-size: 14px;
 }
-.courses-area, .blogs, .cart-area, .empty-cart-area{
+.courses-area, .blogs, .empty-cart-area{
     background: #fff;
     padding: 60px;
 }
+
 .row-area{
     flex-direction: column-reverse;
 }
