@@ -1,4 +1,4 @@
-
+@import url("owl.carousel.css");
 @font-face {
     font-family: "Gordita";
     src: url(../font-family/Gordita.otf);
@@ -1605,7 +1605,7 @@ span:last-child{
     border-color: var(--red);
 }
 .cart-area .total-n-coupon .coupon button,
-.checkout-btn{
+.checkout-btn, .comment-submit{
     border: none;
     min-height: 52px;
     background: var(--red);
@@ -1618,7 +1618,7 @@ span:last-child{
     transition: 0.3s;
 }
 .cart-area .total-n-coupon .coupon button:hover,
-.checkout-btn:hover{
+.checkout-btn:hover, .comment-submit:hover{
     color: #031f42;
     background: #ffc221;
 }
@@ -1847,7 +1847,263 @@ span:last-child{
 .blog-area .intrinsic-box a:hover .box-background{
     opacity: 1;
 }
-
+.related-posts{
+    padding: 0 !important;
+}
+.blog-area h2{
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 20px;
+    color: #252525;
+    font-weight: 600;
+}
+.wrapper{
+    width: 100%;
+}
+.wrapper .carousel{
+    max-width: 1200px;
+    margin: auto;
+}
+.related-posts .wrapper .owl-nav{
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.related-posts .wrapper:hover .owl-nav{
+    opacity: 1;
+}
+.related-posts .wrapper .owl-nav button{
+    height: 52px;
+    width: 52px;
+    font-size: 30px !important;
+    position: absolute;
+    background: #fff !important;
+    border-radius: 50%;
+    box-shadow: 0 0 7px rgb(0 0 0 / 9%);
+    top: 29%;
+    transition: 0.3s;
+}
+.related-posts .wrapper .owl-nav button:first-child{
+    left: 0;
+}
+.related-posts .wrapper .owl-nav button:last-child{
+    right: 0; 
+}
+.related-posts .wrapper .owl-nav button:hover{
+    background: var(--red) !important;
+    color: #fff;
+}
+.thought{
+    padding-bottom: 20px;
+}
+.thought p{
+    font-size: 15px;
+    color: #696969;
+    margin: -15px 0 26px 0;
+}
+.thought input[type="text"], .thought textarea{
+    background: #f8f8f8;
+    border-color: #f8f8f8;
+    color: #252525;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2.5;
+    transition: 0.3s;
+    padding: 3px 20px;
+    min-height: 52px;
+    outline: none;
+    transition: 0.3s;
+}
+.thought textarea{
+    margin-top: 20px;
+    resize: none;
+}
+.thought input:focus, .thought textarea:focus{
+    border-color: var(--red);
+    box-shadow: none;
+}
+.thought .check{
+    margin: 20px 0;
+    width: fit-content;
+}
+.thought .check input{
+    cursor: pointer;
+    transition: 0.3s;
+}
+.thought .check span{
+    font-size: 15px;
+    color: #696969;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.thought .check:hover input{
+    border-color: var(--red);
+}
+.thought .comment-submit{
+    width: 140px;
+}
+.blog-area .hightlight-area h2{
+    padding-bottom: 4px;
+    margin-bottom: 28px;
+    border-bottom: 2px solid #e7e7e7;
+}
+.blog-area .search .search-box{
+    position: relative;
+}
+.blog-area .search .search-box .search-icon{
+    min-height: 52px;
+    width: 52px;
+    font-size: 18px;
+}
+.blog-area .search input{
+    min-height: 52px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #f5f5f5;
+    background: #f5f5f5;
+    padding: 3px 20px;
+}
+.blog-area .blog-categories h2{
+    margin-top: 50px;
+}
+.blog-area .blog-categories ul{
+    list-style: none;
+    padding: 0;
+}
+.blog-area .blog-categories ul li a{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #696969;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.blog-area .blog-categories ul li a:hover{
+    color: var(--red);
+}
+.blog-area .latest-posts ul{
+    list-style: none;
+    padding: 0;
+}
+.blog-area .latest-posts .lb-image{
+    width: 95px;
+    height: 74px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.blog-area .latest-posts .lb-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    transition: 1s;
+}
+.blog-area .latest-posts .lb-image img:hover{
+    transform: scale(1.5);
+}
+.blog-area .latest-posts .lb-info a{
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 1.6;
+    color: #252525;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.blog-area .latest-posts .lb-info a:hover{
+    color: var(--red);
+}
+.blog-area .latest-posts .lb-info p{
+    margin: 14px 0;
+    font-size: 14px;
+    color: #9b9b9b;
+}
+.blog-area .latest-posts .lb-card{
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 6px;
+    margin: 20px 0 0 0;
+}
+.blog-area .latest-posts .lb-card .col-1{
+    padding-left: 0;
+}
+.blog-area .latest-posts .lb-card .col-2{
+    padding-right: 0;
+}
+.blog-area .latest-posts .b-category{
+    position: absolute;
+    bottom: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #fff;
+    background: rgba(0,0,0,.3);
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.blog-area .latest-posts .lb-card:last-child{
+    border: none;
+    margin-bottom: 20px;
+}
+.blog-area .popular-tags button{
+    background: #f5f5f5;
+    color: #ababab;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 15px;
+    line-height: 24px;
+    margin: 5px 5px 5px 0;
+    float: left;
+    transition: 0.3s;
+}
+.blog-area .popular-tags button:hover{
+    background: var(--red);
+    color: #fff;
+}
+.wrapper .carousel .revw{
+    padding: 32px 40px 37px;
+    position: relative;
+    background: #f8f8f8;
+    border-radius: 8px;
+}
+.wrapper .carousel .revw .info{
+    display: flex;
+    margin-top: 35px;
+}
+.wrapper .carousel .revw h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--red);
+    margin: 0 0 11px;
+    line-height: 1.67;
+}
+.wrapper .carousel .revw .revw-text{
+    font-size: 16px;
+    line-height: 32px;
+    color: #696969;
+    font-weight: 600;
+}
+.wrapper .carousel .revw .img{
+    border-radius: 50%;
+    overflow: hidden;
+    width: 60px;
+    margin-right: 15px;
+}
+.wrapper .carousel .revw .detail h2{
+    font-size: 14px;
+    color: #000;
+    line-height: 26px;
+    font-weight: 800;
+}
+.wrapper .carousel .revw .detail p{
+    font-size: 14px;
+    color: #252525;
+    margin: 0;
+}
+.review .wrapper{
+    margin-top: 20px;
+}
 /*Mobile styles*/
 .mobile-menu{
     display: flex;
@@ -2100,6 +2356,9 @@ span:last-child{
     }
     .cart-area .total-n-coupon .total{
         padding: 25px 30px 34px;
+    }
+    .review .wrapper{
+        margin-top: 0;
     }
 }
 .page-heading{

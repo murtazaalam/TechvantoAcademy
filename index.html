@@ -5,10 +5,13 @@
         <link rel="stylesheet" href="css/bootstrap.css" />
         <link rel="stylesheet" href="css/all.css" />
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/owl.carousel.css"/>
         <script src="js/js.js" type="text/javascript"></script>
         <script src="js/popper.min.js" type="text/javascript"></script>
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <script src="js/all.js" type="text/javascript"></script>
+        <script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
+        <script src="js/owl.carousel.min.js" type="text/javascript"></script>
     </head>
     <body>
         <header id="navbar-top" class="header-box">
@@ -916,7 +919,7 @@
         <section class="review">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-lg-3 col-md-12 col-sm-12 col-12">
                         <div class="heading">
                             <h3>People Say<br> About Techvanto</h3>
                         </div>
@@ -929,50 +932,78 @@
                             <button type="button">View all</button>                            
                         </div>
                     </div>
-                    <!--class="carousel slide" data-bs-ride="carousel"-->
-                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12 review-slider">
-                        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active" style="height: 300px; width: 100%; background-color: red;">
-                                    <div class="review-1">
-                                        <h3 class="title">Great Quality!</h3>
-                                        <p class="description">
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                                             been the industry's standard dummy text ever since the 1500s, when an unknown printer took 
-                                             a galley of type and scrambled it to make a type specimen book. It has survived not only five
-                                            centuries, 
-                                        </p>
-                                        <div class="reviewer">
-                                            <div class="image"></div>
-                                            <div class="details">
-                                                <span class="name">Murtuza</span>
-                                                <span class="designation">Web Developer</span>
-                                            </div>
+                    <!--Review Carousel-->
+                    <div class="col-lg-9 col-md-12 col-sm-12 col-12">
+                        <div class="wrapper">
+                            <div class="carousel owl-carousel">
+                                <div class="revw">
+                                    <h4>Great Quality!</h4>
+                                    <div class="revw-text">
+                                        I wanted to place a review since their support helped me within a day or so, which is nice! 
+                                        Thanks and 5 Star!
+                                    </div>
+                                    <div class="info">
+                                        <div class="img">
+                                            <img src="images/review_img_1.jpg" />
+                                        </div>
+                                        <div class="detail">
+                                            <h2>Oliver Beddows</h2>
+                                            <p>/ Designer, Manchester</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="carousel-item" style="height: 300px; width: 100%; background-color: blue;">
-                                    blue
+                                <div class="revw">
+                                    <h4>Great Quality!</h4>
+                                    <div class="revw-text">
+                                        I wanted to place a review since their support helped me within a day or so, which is nice! 
+                                        Thanks and 5 Star!
+                                    </div>
+                                    <div class="info">
+                                        <div class="img">
+                                            <img src="images/review_img_1.jpg" />
+                                        </div>
+                                        <div class="detail">
+                                            <h2>Oliver Beddows</h2>
+                                            <p>/ Designer, Manchester</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="carousel-item" style="height: 300px; width: 100%; background-color: yellow;">
-                                    yeloq
+                                <div class="revw">
+                                    <h4>Great Quality!</h4>
+                                    <div class="revw-text">
+                                        I wanted to place a review since their support helped me within a day or so, which is nice! 
+                                        Thanks and 5 Star!
+                                    </div>
+                                    <div class="info">
+                                        <div class="img">
+                                            <img src="images/review_img_1.jpg" />
+                                        </div>
+                                        <div class="detail">
+                                            <h2>Oliver Beddows</h2>
+                                            <p>/ Designer, Manchester</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>  
-                        </div>       
+                                <div class="revw">
+                                    <h4>Great Quality!</h4>
+                                    <div class="revw-text">
+                                        I wanted to place a review since their support helped me within a day or so, which is nice! 
+                                        Thanks and 5 Star!
+                                    </div>
+                                    <div class="info">
+                                        <div class="img">
+                                            <img src="images/review_img_1.jpg" />
+                                        </div>
+                                        <div class="detail">
+                                            <h2>Oliver Beddows</h2>
+                                            <p>/ Designer, Manchester</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
         </section>
@@ -1250,6 +1281,30 @@
             </div>
         </div>
         <!--End of sign up form modal-->
+        <script>
+            $(".carousel").owlCarousel({
+                margin: 10,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0:{
+                        items: 1,
+                        nav: false
+                    },
+                    600:{
+                        items: 2,
+                        nav: false
+                    },
+                    1000:{
+                        items: 3,
+                        nav: false
+                    }
+                }
+                
+            });
+        </script>
 
     </body>
 </html>
