@@ -163,7 +163,7 @@ header{
     font-size: 13px;
     font-weight: 600;
     color: #7a7a7a;
-    margin-top: 14px;
+    margin-top: 30px;
     cursor: pointer;
 }
 .signup-modal form input[type="text"], input[type="password"],
@@ -181,6 +181,14 @@ input[type="email"]{
 }
 .signup-modal .modal .modal-body{
     padding: 0 50px 0 50px;
+}
+.signup-modal form .error{
+    font-size: 12px;
+    margin-top: 4px;
+    color: var(--red);
+    display: none;
+    margin-bottom: 0;
+    position: absolute;
 }
 .signup-modal form .form-control:focus{
     box-shadow: none;
@@ -216,10 +224,11 @@ input[type="email"]{
     border: none;
     position: absolute;
     right: 0;
-    top: -27px;
-    color: #fff;
+    top: 0px;
+    font-weight: 700;
+    color: #000;
 }
-.signup-modal form button[type="submit"]{
+.signup-modal form button{
     width: 100%;
     border: none;
     background: var(--red);
@@ -230,7 +239,7 @@ input[type="email"]{
     border-radius: 5px;
     transition: 0.3s;
 }
-.signup-modal form button[type="submit"]:hover{
+.signup-modal form button:hover{
     background: #ffc221;
     border-color: #ffc221;
     color: #031f42;
@@ -240,8 +249,8 @@ input[type="email"]{
 }
 .signup-modal form .password .icon{
     position: absolute;
-    right: 30px;
-    top: 60%;
+    right: 20px;
+    top: 29%;
     color: #696969;
     font-size: 14px;
     cursor: pointer;
@@ -250,6 +259,77 @@ input[type="email"]{
 .signup-modal form .password .icon:hover{
     color: #0071dc;
 }
+.signup-modal form .password .strength{
+    margin-top: 4px;
+    display: none;
+    width: 100%;
+    padding-right: 23px;
+    position: absolute;
+}
+.signup-modal form .password .strength p{
+    font-size: 12px;
+    color: var(--red);
+    margin: 0;
+}
+.signup-modal form .password .strength .stren-line{
+    width: 100%;
+    height: 2px;
+    background: var(--red);
+}
+.signup-modal form .password .forgot-p{
+    font-size: 14px;
+    float: right;
+    cursor: pointer;
+    color: #252525;
+    font-weight: 600;
+    margin-top: 4px;
+    display: none;
+    text-decoration: none;
+}
+.signup-modal .modal-footer .login-by-social{
+    display: none;
+}
+.signup-modal .modal-footer .login-by-social h2{
+    font-size: 18px;
+    color: #252525;
+    font-weight: 600;
+}
+.signup-modal .modal-footer{
+    display: block;
+    text-align: center;
+    padding-top: 0;
+}
+.signup-modal .login-by-social span{
+    font-size: 20px;
+    margin-right: 10px;
+}
+.signup-modal .login-by-social .g-icon{
+    background: #fff;
+    color: var(--red);
+    padding: 0px 4px;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 26px;
+}
+.signup-modal .login-by-social button{
+    width: 100%;
+    min-height: 52px;
+    border: 1px solid;
+    border-color: #f8f8f8;
+    border-radius: 4px;
+    color: #fff;
+    background: #1777f2;
+    font-weight: 700;
+    transition: 0.3s;
+}
+.signup-modal .login-by-social .g-btn{
+    background: var(--red);
+    margin-top: 12px;
+}
+.signup-modal .login-by-social button:hover{
+    background: #ffc221;
+}
+
 .center-content .left-content{
     display: flex;
     align-items: center;
@@ -1602,7 +1682,7 @@ span:last-child{
 }
 .cart-area .total-n-coupon .coupon input:focus{
     background: #fff;
-    border-color: var(--red);
+    border-color: #88797a;
 }
 .cart-area .total-n-coupon .coupon button,
 .checkout-btn, .comment-submit{
@@ -1917,9 +1997,10 @@ span:last-child{
     margin-top: 20px;
     resize: none;
 }
-.thought input:focus, .thought textarea:focus{
-    border-color: var(--red);
+.thought input[type="text"]:focus, .thought textarea:focus{
+    border-color: #88797a;
     box-shadow: none;
+    background: #fff;
 }
 .thought .check{
     margin: 20px 0;
@@ -1928,6 +2009,10 @@ span:last-child{
 .thought .check input{
     cursor: pointer;
     transition: 0.3s;
+}
+.thought .check input[type="checkbox"]:focus{
+    box-shadow: none;
+
 }
 .thought .check span{
     font-size: 15px;
@@ -1962,6 +2047,11 @@ span:last-child{
     border: 1px solid #f5f5f5;
     background: #f5f5f5;
     padding: 3px 20px;
+    transition: 0.3s;
+}
+.blog-area .search input:focus{
+    border-color: #88797a;
+    background: #fff;
 }
 .blog-area .blog-categories h2{
     margin-top: 50px;
@@ -2066,10 +2156,15 @@ span:last-child{
     position: relative;
     background: #f8f8f8;
     border-radius: 8px;
+    position: relative;
 }
 .wrapper .carousel .revw .info{
     display: flex;
     margin-top: 35px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .wrapper .carousel .revw h4{
     font-size: 18px;
@@ -2089,6 +2184,8 @@ span:last-child{
     overflow: hidden;
     width: 60px;
     margin-right: 15px;
+    min-width: 60px;
+    height: 60px;
 }
 .wrapper .carousel .revw .detail h2{
     font-size: 14px;
@@ -2103,6 +2200,30 @@ span:last-child{
 }
 .review .wrapper{
     margin-top: 20px;
+}
+.wrapper .carousel .revw .quote{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #e0e3e6;
+    font-size: 32px;
+}
+.review .wrapper .carousel .owl-dots{
+    text-align: center;
+}
+.review .wrapper .carousel .owl-dots button{
+    background: #c1c1c1;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+.review .wrapper .carousel .owl-dots button.active{
+    background: #252525;
+}
+.review .wrapper .carousel .owl-dots button:hover{
+    background: #252525;
 }
 /*Mobile styles*/
 .mobile-menu{
@@ -2232,6 +2353,15 @@ span:last-child{
     }
     .blog-area .intrinsic-box{
         max-width: 350px;
+    }
+    .wrapper .carousel .revw .info{
+        flex-direction: row;
+        text-align: left;
+        justify-content: end;
+    }
+    .signup-modal .close{
+        top: -27px;
+        color: #fff;
     }
 }
 
